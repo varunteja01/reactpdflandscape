@@ -1,13 +1,13 @@
 import React from 'react'
 import { Text, View, StyleSheet, Image } from '@react-pdf/renderer'
-import smartpharma from '../smartpharma360.jpg'
+import phonepe from '../phonepe.jpg'
 
 const styles = StyleSheet.create({
   bankDetailsRow: {
     flexDirection: 'row',
     borderRight: 1,
     gap: 40,
-    width: '25%',
+    width: '24%',
   },
   bankDetailsColumn: {
     flexDirection: 'column',
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   titleImage: {
     width: 60,
     height: 60,
-    border: 1,
+    marginTop: 5,
   },
 })
 
@@ -34,7 +34,7 @@ const DynamicDetails = ({ details }) => {
         <Text>IFSC:{details.detail4}</Text>
       </View>
       <View>
-        <Image src={smartpharma} style={styles.titleImage} />
+        <Image src={phonepe} style={styles.titleImage} />
       </View>
     </View>
   )
