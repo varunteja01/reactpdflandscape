@@ -6,22 +6,27 @@ const styles = StyleSheet.create({
     display: 'table',
     width: 'auto',
     borderStyle: 'solid',
-    textAlign: 'left',
+    textAlign: 'right',
   },
   tableRow: {
     margin: 'auto',
     flexDirection: 'row',
+    minHeight: 16,
+    // flexGrow: 1,
   },
   tableCol: {
     borderStyle: 'solid',
-    borderWidth: 1,
-    borderLeftWidth: 0,
-    borderTopWidth: 0,
+    borderRight: 1,
+    // borderBottom: 1,
+
+    // borderWidth: 1,
+    // borderLeftWidth: 0,
+    // borderTopWidth: 0,
   },
   tableCell: {
-    marginTop: 5,
+    marginBottom: 5,
     fontSize: 9,
-    paddingLeft: 3,
+    paddingRight: 3,
   },
 })
 
@@ -39,7 +44,14 @@ const Table = ({ tableData }) => {
           <View style={{ ...styles.tableCol, width: '4%' }}>
             <Text style={styles.tableCell}>MFG</Text>
           </View>
-          <View style={{ ...styles.tableCol, width: '28%' }}>
+          <View
+            style={{
+              ...styles.tableCol,
+              width: '28%',
+              textAlign: 'left',
+              paddingLeft: 3,
+            }}
+          >
             <Text style={styles.tableCell}>Product Name</Text>
           </View>
           <View style={{ ...styles.tableCol, width: '4%' }}>
@@ -69,7 +81,7 @@ const Table = ({ tableData }) => {
           <View style={{ ...styles.tableCol, width: '7%' }}>
             <Text style={styles.tableCell}>Disc%</Text>
           </View>
-          <View style={{ ...styles.tableCol, width: '7%' }}>
+          <View style={{ ...styles.tableCol, width: '7%', borderRight: 0 }}>
             <Text style={styles.tableCell}>GST%</Text>
           </View>
         </View>
@@ -84,7 +96,14 @@ const Table = ({ tableData }) => {
             <View style={{ ...styles.tableCol, width: '4%' }}>
               <Text style={styles.tableCell}>{data.mfg}</Text>
             </View>
-            <View style={{ ...styles.tableCol, width: '28%' }}>
+            <View
+              style={{
+                ...styles.tableCol,
+                width: '28%',
+                textAlign: 'left',
+                paddingLeft: 3,
+              }}
+            >
               <Text style={styles.tableCell}>{data.productName}</Text>
             </View>
             <View style={{ ...styles.tableCol, width: '4%' }}>
@@ -114,7 +133,7 @@ const Table = ({ tableData }) => {
             <View style={{ ...styles.tableCol, width: '7%' }}>
               <Text style={styles.tableCell}>{data.disc}</Text>
             </View>
-            <View style={{ ...styles.tableCol, width: '7%' }}>
+            <View style={{ ...styles.tableCol, width: '7%', borderRight: 0 }}>
               <Text style={styles.tableCell}>{data.gst}</Text>
             </View>
           </View>

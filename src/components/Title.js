@@ -9,6 +9,7 @@ import To from './To'
 const styles = StyleSheet.create({
   titleFlex: {
     flexDirection: 'row',
+    borderBottom: 1,
   },
   titleImage: {
     width: 80,
@@ -18,7 +19,7 @@ const styles = StyleSheet.create({
 })
 
 const Title = () => (
-  <View fixed>
+  <View>
     {/* what if you want to wrap pages but also be able to render a component on all pages? This is where the fixed prop comes into play. */}
     <View style={styles.titleFlex}>
       <Image src={smartpharma} style={styles.titleImage} />
