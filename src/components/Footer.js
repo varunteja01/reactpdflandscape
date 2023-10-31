@@ -8,7 +8,8 @@ import NetAmount from './NetAmount'
 const styles = StyleSheet.create({
   titleFlex: {
     flexDirection: 'row',
-    borderTop: 1,
+
+    // borderTop: 1,
   },
 })
 
