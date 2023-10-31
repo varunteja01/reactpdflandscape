@@ -12,11 +12,25 @@ const styles = StyleSheet.create({
 
 const Calculation = ({ tableData }) => {
   const numberOfRows = tableData.length
+  const { totalQuantity } = tableData.reduce(
+    (accumulator, item) => {
+      // Parse quantity and free values to numbers (assuming they are strings)
+      const quantity = parseFloat(item.qty) || 0
+      const freeItems = parseFloat(item.free) || 0
+      // Add quantity and free items together
+      const combinedQuantity = quantity + freeItems
+      // Add to the accumulator
+      accumulator.totalQuantity += combinedQuantity
+
+      return accumulator
+    },
+    { totalQuantity: 0 }
+  )
 
   return (
     <View style={styles.styleDirection}>
       <CalculationTable />
-      <TotalDue numberOfRows={numberOfRows} />
+      <TotalDue numberOfRows={numberOfRows} totalQuantity={totalQuantity} />
     </View>
   )
 }

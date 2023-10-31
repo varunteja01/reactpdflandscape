@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   },
 })
 
-const TotalDue = ({ numberOfRows }) => {
+const TotalDue = ({ numberOfRows, totalQuantity }) => {
   return (
     <View style={styles.totalDueStyle}>
       <View style={styles.TotalDueColumn}>
@@ -35,7 +35,7 @@ const TotalDue = ({ numberOfRows }) => {
             <View style={{ gap: 1.5 }}>
               <Text>Cases </Text>
               <Text>Total Items </Text>
-              <Text>Total Cases</Text>
+              <Text>Total Qty</Text>
             </View>
             <View style={{ gap: 1.5 }}>
               <Text>:</Text>
@@ -45,7 +45,7 @@ const TotalDue = ({ numberOfRows }) => {
             <View style={{ gap: 1.5, paddingRight: 6 }}>
               <Text>0</Text>
               <Text>{numberOfRows}</Text>
-              <Text>1</Text>
+              <Text>{totalQuantity}</Text>
             </View>
           </View>
           <View style={{ flexDirection: 'row', gap: 20, borderRight: 1 }}>

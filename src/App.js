@@ -11,11 +11,26 @@ import {
 import Table from './components/Table'
 import Note from './components/Note'
 import Calculation from './components/Calculation'
-import TotalDue from './components/TotalDue'
 import Footer from './components/Footer'
 
 const App = () => {
   const tableData = [
+    {
+      sno: 0,
+      hsn: 30049061,
+      mfg: 'MIC',
+      productName: 'DOLO 650',
+      pack: 15,
+      batchNo: 'TESTNEW',
+      expiry: '02/2025',
+      qty: 1,
+      free: '1',
+      rate: 24.0,
+      amount: 24.0,
+      mrp: 31.0,
+      disc: 12,
+      gst: 12,
+    },
     {
       sno: 0,
       hsn: 30049061,
@@ -283,7 +298,7 @@ const App = () => {
       batchNo: 'BATCH003',
       expiry: '01/2026',
       qty: 5,
-      free: '',
+      free: '3',
       rate: 7.25,
       amount: 36.25,
       mrp: 9.0,
@@ -299,7 +314,7 @@ const App = () => {
       batchNo: 'BATCH003',
       expiry: '01/2026',
       qty: 5,
-      free: '',
+      free: '4',
       rate: 7.25,
       amount: 36.25,
       mrp: 9.0,
