@@ -32,17 +32,17 @@ const TotalDue = ({ numberOfRows, totalQuantity }) => {
           }}
         >
           <View style={{ flexDirection: 'row', gap: 20, borderRight: 1 }}>
-            <View style={{ gap: 1.5 }}>
+            <View style={{ gap: 5 }}>
               <Text>Cases </Text>
               <Text>Total Items </Text>
               <Text>Total Qty</Text>
             </View>
-            <View style={{ gap: 1.5 }}>
+            <View style={{ gap: 5 }}>
               <Text>:</Text>
               <Text>:</Text>
               <Text>:</Text>
             </View>
-            <View style={{ gap: 1.5, paddingRight: 6 }}>
+            <View style={{ gap: 5, paddingRight: 6 }}>
               <Text>0</Text>
               <Text>{numberOfRows}</Text>
               <Text>{totalQuantity}</Text>
