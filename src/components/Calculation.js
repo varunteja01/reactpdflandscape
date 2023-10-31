@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
   },
 })
 
-const Calculation = ({ tableData }) => {
+const Calculation = ({ tableData, isLastPage }) => {
   const numberOfRows = tableData.length
   const { totalQuantity } = tableData.reduce(
     (accumulator, item) => {
@@ -29,8 +29,12 @@ const Calculation = ({ tableData }) => {
 
   return (
     <View style={styles.styleDirection}>
-      <CalculationTable />
-      <TotalDue numberOfRows={numberOfRows} totalQuantity={totalQuantity} />
+      <CalculationTable isLastPage={isLastPage} />
+      <TotalDue
+        numberOfRows={numberOfRows}
+        totalQuantity={totalQuantity}
+        isLastPage={isLastPage}
+      />
     </View>
   )
 }

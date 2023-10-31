@@ -11,9 +11,14 @@ const styles = StyleSheet.create({
   },
 })
 
-const NetAmount = () => (
+const NetAmount = ({ isLastPage }) => (
   <View style={styles.netAmountStyles}>
     <Text>NET AMOUNT:</Text>
+    {isLastPage ? (
+      <Text style={{ fontSize: 20, paddingLeft: 40 }}>Rs. 24.00</Text>
+    ) : (
+      <Text style={{ fontSize: 20, paddingLeft: 30 }}>Continue...</Text>
+    )}
   </View>
 )
 

@@ -282,7 +282,7 @@ const App = () => {
       batchNo: 'BATCH003',
       expiry: '01/2026',
       qty: 5,
-      free: '',
+      free: '1',
       rate: 7.25,
       amount: 36.25,
       mrp: 9.0,
@@ -456,8 +456,11 @@ const App = () => {
               <Title title={`Page ${pageIndex + 1}`} />
               <Table tableData={pageData} />
               <Note />
-              <Calculation tableData={tableData} />
-              <Footer />
+              <Calculation
+                tableData={tableData}
+                isLastPage={pageIndex === pagesData.length - 1}
+              />
+              <Footer isLastPage={pageIndex === pagesData.length - 1} />
             </View>
             <Text
               style={styles.pageNumbers}

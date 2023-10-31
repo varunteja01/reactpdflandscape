@@ -51,20 +51,21 @@ const styles = StyleSheet.create({
   },
   tableRow: {
     flexDirection: 'row',
+    height: 12,
   },
   tableColumn: {
     borderRight: 1,
     borderBottom: 1,
   },
   tableCell: {
-    fontSize: 9,
+    fontSize: 8,
     textAlign: 'right',
     paddingBottom: 1.1,
     paddingRight: 1,
   },
 })
 
-const CalculationTable = () => (
+const CalculationTable = ({ isLastPage }) => (
   <View style={styles.table}>
     <View style={{ ...styles.tableRow, backgroundColor: '#c0c0c0' }}>
       <View style={{ ...styles.tableColumn, width: '16.67%' }}>
@@ -89,22 +90,32 @@ const CalculationTable = () => (
     {CalculationTableData.map((data, index) => (
       <View style={styles.tableRow} key={index}>
         <View style={{ ...styles.tableColumn, width: '16.67%' }}>
-          <Text style={styles.tableCell}>{data.gst}</Text>
+          {isLastPage ? <Text style={styles.tableCell}>{data.gst}</Text> : null}
         </View>
         <View style={{ ...styles.tableColumn, width: '16.67%' }}>
-          <Text style={styles.tableCell}>{data.disc}</Text>
+          {isLastPage ? (
+            <Text style={styles.tableCell}>{data.disc}</Text>
+          ) : null}
         </View>
         <View style={{ ...styles.tableColumn, width: '16.67%' }}>
-          <Text style={styles.tableCell}>{data.taxableValue}</Text>
+          {isLastPage ? (
+            <Text style={styles.tableCell}>{data.taxableValue}</Text>
+          ) : null}
         </View>
         <View style={{ ...styles.tableColumn, width: '16.67%' }}>
-          <Text style={styles.tableCell}>{data.cgst}</Text>
+          {isLastPage ? (
+            <Text style={styles.tableCell}>{data.cgst}</Text>
+          ) : null}
         </View>
         <View style={{ ...styles.tableColumn, width: '16.67%' }}>
-          <Text style={styles.tableCell}>{data.sgst}</Text>
+          {isLastPage ? (
+            <Text style={styles.tableCell}>{data.sgst}</Text>
+          ) : null}
         </View>
         <View style={{ ...styles.tableColumn, width: '16.67%' }}>
-          <Text style={styles.tableCell}>{data.igst}</Text>
+          {isLastPage ? (
+            <Text style={styles.tableCell}>{data.igst}</Text>
+          ) : null}
         </View>
       </View>
     ))}

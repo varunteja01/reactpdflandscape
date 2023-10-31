@@ -13,12 +13,12 @@ const styles = StyleSheet.create({
   },
 })
 
-const Footer = () => (
+const Footer = ({ isLastPage }) => (
   <View style={styles.titleFlex}>
     <TermsAndConditions />
     <BankDetails />
     <Signatory />
-    <NetAmount />
+    <NetAmount isLastPage={isLastPage} />
   </View>
 )
 

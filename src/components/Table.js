@@ -12,16 +12,10 @@ const styles = StyleSheet.create({
     margin: 'auto',
     flexDirection: 'row',
     minHeight: 16,
-    // flexGrow: 1,
   },
   tableCol: {
     borderStyle: 'solid',
     borderRight: 1,
-    // borderBottom: 1,
-
-    // borderWidth: 1,
-    // borderLeftWidth: 0,
-    // borderTopWidth: 0,
   },
   tableCell: {
     marginBottom: 5,

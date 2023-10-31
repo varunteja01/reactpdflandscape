@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   },
 })
 
-const TotalDue = ({ numberOfRows, totalQuantity }) => {
+const TotalDue = ({ numberOfRows, totalQuantity, isLastPage }) => {
   return (
     <View style={styles.totalDueStyle}>
       <View style={styles.TotalDueColumn}>
@@ -31,7 +31,7 @@ const TotalDue = ({ numberOfRows, totalQuantity }) => {
             paddingBottom: 3,
           }}
         >
-          <View style={{ flexDirection: 'row', gap: 20, borderRight: 1 }}>
+          <View style={{ flexDirection: 'row', gap: 15, borderRight: 1 }}>
             <View style={{ gap: 5 }}>
               <Text>Cases </Text>
               <Text>Total Items </Text>
@@ -43,12 +43,12 @@ const TotalDue = ({ numberOfRows, totalQuantity }) => {
               <Text>:</Text>
             </View>
             <View style={{ gap: 5, paddingRight: 6 }}>
-              <Text>0</Text>
-              <Text>{numberOfRows}</Text>
-              <Text>{totalQuantity}</Text>
+              {isLastPage ? <Text>0</Text> : null}
+              {isLastPage ? <Text>{numberOfRows}</Text> : null}
+              {isLastPage ? <Text>{totalQuantity}</Text> : null}
             </View>
           </View>
-          <View style={{ flexDirection: 'row', gap: 20, borderRight: 1 }}>
+          <View style={{ flexDirection: 'row', gap: 15, borderRight: 1 }}>
             <View style={{ gap: 1.5 }}>
               <Text>Disc. Per</Text>
               <Text>Cr/Dr Amt.</Text>
@@ -62,14 +62,14 @@ const TotalDue = ({ numberOfRows, totalQuantity }) => {
               <Text>:</Text>
             </View>
             <View style={{ gap: 1.5, paddingRight: 6 }}>
-              <Text>0</Text>
-              <Text>0</Text>
-              <Text>0.00</Text>
-              <Text>0.34</Text>
+              {isLastPage ? <Text>0</Text> : null}
+              {isLastPage ? <Text>0</Text> : null}
+              {isLastPage ? <Text>0.00</Text> : null}
+              {isLastPage ? <Text>0.34</Text> : null}
             </View>
           </View>
 
-          <View style={{ flexDirection: 'row', gap: 20 }}>
+          <View style={{ flexDirection: 'row', gap: 15 }}>
             <View style={{ gap: 1.5 }}>
               <Text>Subtotal </Text>
               <Text>Discount </Text>
@@ -83,10 +83,10 @@ const TotalDue = ({ numberOfRows, totalQuantity }) => {
               <Text>:</Text>
             </View>
             <View style={{ gap: 1.5 }}>
-              <Text>24.00</Text>
-              <Text>2.88</Text>
-              <Text>2.54</Text>
-              <Text>0</Text>
+              {isLastPage ? <Text>242333.23</Text> : null}
+              {isLastPage ? <Text>2.88</Text> : null}
+              {isLastPage ? <Text>2,12321111</Text> : null}
+              {isLastPage ? <Text>0</Text> : null}
             </View>
           </View>
         </View>
