@@ -28,9 +28,15 @@ const DynamicDetails = ({ details }) => {
     <View style={styles.bankDetailsRow}>
       <View style={styles.bankDetailsColumn}>
         <Text>Bank Details:</Text>
-        <Text>A/C:{details.detail1}</Text>
-        <Text>{details.bank}</Text>
-        <Text>Branch:{details.detail3}</Text>
+        <Text>
+          A/C:
+          <Text style={{ fontFamily: 'AntonFamily' }}> {details.detail1}</Text>
+        </Text>
+        <Text style={{ fontFamily: 'AntonFamily' }}>{details.bank}</Text>
+        <Text>
+          Branch:
+          <Text style={{ fontFamily: 'AntonFamily' }}>{details.detail3}</Text>
+        </Text>
         <Text>IFSC:{details.detail4}</Text>
       </View>
       <View>

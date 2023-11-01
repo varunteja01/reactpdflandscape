@@ -101,7 +101,10 @@ const TotalDue = ({ numberOfRows, totalQuantity, isLastPage }) => {
             borderRight: 0,
           }}
         >
-          <Text>Amt in words: twenty Four Rupees Only </Text>
+          <Text>
+            Amt in words:{' '}
+            {isLastPage ? <Text> twenty Four Rupees Only</Text> : null}
+          </Text>
         </View>
       </View>
     </View>
